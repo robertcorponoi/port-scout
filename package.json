@@ -1,0 +1,32 @@
+{
+  "name": "port-scout",
+  "version": "0.1.0",
+  "description": "Checks for an available port using different methods",
+  "main": "dist/index.js",
+  "cli": "cli/bin/port-scout.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "keywords": [
+    "port",
+    "available",
+    "ports",
+    "random",
+    "web",
+    "range"
+  ],
+  "author": "Robert Corponoi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "commander": "^3.0.1"
+  }
+}
