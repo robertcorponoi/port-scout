@@ -48,9 +48,7 @@ Port Scout is exported as a series of functions so you can just require the `por
 const scouter = require('port-scout');
 
 async function main() {
-
   const webPort = await scouter.web();
-
 }
 
 main();
@@ -62,13 +60,11 @@ main();
 
 Checks common web ports to see what port is available and returns it.
 
-**Example**
+**Example:**
 
 ```js
 async function main() {
-
   const webPort = await scouter.web();
-
 }
 
 main();
@@ -82,13 +78,11 @@ Tries random ports and returns the first available one. Ports 1-1024 are automat
 |-----------------	|---------	|-----------------------------------------------------------	|---------	|
 | allowRestricted 	| boolean 	| If set to true, this will allow ports 1-1024 to be tried. 	| false   	|
 
-**Example**
+**Example:**
 
 ```js
 async function main() {
-
   const randomPort = await scouter.random();
-
 }
 
 main();
@@ -103,13 +97,11 @@ Checks a provided range of ports for the first available port and returns it.
 | start 	| number 	| The start of the range of ports to check 	|         	|
 | end   	| number 	| The end of the range of ports to check   	| 65535   	|
 
-**Example**
+**Example:**
 
 ```js
 async function main() {
-
   const rangePort = await scouter.range(3050, 3075);
-
 }
 
 main();
@@ -132,7 +124,7 @@ The customize the way ports are retrieved you can use a combination of the flags
 -f, --force              : This can be used in conjunction with the random or range flag to override the default rule of not allowing a port between 1 - 1024 to be tested.
 ```
 
-**Example**
+**Example:**
 
 For example, if you would like to get the first available port between 3050 and 3075 you can use:
 
