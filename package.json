@@ -1,6 +1,6 @@
 {
   "name": "port-scout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checks for an available port using different methods",
   "main": "dist/index.js",
   "cli": "cli/bin/port-scout.js",
@@ -21,12 +21,12 @@
   "author": "Robert Corponoi",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.7.5",
+    "@types/node": "^12.12.6",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "typescript": "^3.6.3"
+    "mocha": "^6.2.2",
+    "typescript": "^3.7.2"
   },
   "dependencies": {
-    "commander": "^3.0.1"
+    "commander": "^4.0.0"
   }
 }
