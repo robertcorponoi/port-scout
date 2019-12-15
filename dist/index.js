@@ -15,8 +15,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const net = __importStar(require("net"));
+// @ts-ignore
+const num_step_1 = __importDefault(require("num-step"));
 const utils_1 = require("./utils");
 /**
  * Finds the first available port that should be used based on conditions specified by the user.
@@ -31,7 +36,9 @@ module.exports = {
      */
     web() {
         return __awaiter(this, void 0, void 0, function* () {
+            const stepper = new num_step_1.default([3000, 8000, 8080]);
             let port = 3000;
+            let amountToStep = 1;
             let success = false;
             while (!success) {
                 try {
@@ -39,7 +46,8 @@ module.exports = {
                     return port;
                 }
                 catch (err) {
-                    port++;
+                    amountToStep++;
+                    port = stepper.step(amountToStep);
                 }
             }
         });

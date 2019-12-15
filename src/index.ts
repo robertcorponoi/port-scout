@@ -1,6 +1,8 @@
 'use strict'
 
 import * as net from 'net';
+// @ts-ignore
+import Stepper from 'num-step';
 import { randomInteger } from './utils';
 
 /**
@@ -17,7 +19,11 @@ module.exports = {
    */
   async web(): Promise<number> {
 
+    const stepper = new Stepper([3000, 8000, 8080]);
+
     let port: number = 3000;
+
+    let amountToStep: number = 1;
 
     let success: boolean = false;
 
@@ -31,7 +37,9 @@ module.exports = {
 
       } catch (err) {
 
-        port++;
+        amountToStep++;
+
+        port = stepper.step(amountToStep);
 
       }
 

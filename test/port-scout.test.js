@@ -18,17 +18,30 @@ describe('Finding available web ports', () => {
 
   });
 
-  it('should find port 3003 as the first available web port as 3000, 3001, and 3002 are taken by a test process', async () => {
+  it('should find port 8080 as the first available web port as 3000 and 8000 are taken by a test process', async () => {
 
     occupyPort(3000);
-    occupyPort(3001);
-    occupyPort(3002);
+    occupyPort(8000);
 
     const port = await scanner.web();
 
     clearPorts();
 
-    chai.expect(port).to.equal(3003);
+    chai.expect(port).to.equal(8080);
+
+  });
+
+  it('should find port 3001 as the first available web port as 3000, 8000, and 8080 are taken by a test process', async () => {
+
+    occupyPort(3000);
+    occupyPort(8000);
+    occupyPort(8080);
+
+    const port = await scanner.web();
+
+    clearPorts();
+
+    chai.expect(port).to.equal(3001);
 
   });
 
