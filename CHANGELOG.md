@@ -1,3 +1,8 @@
+1.1.1 / 2019-02-01
+==================
+* [MISC] Updated dependencies to their latest versions.
+* [MISC] Updated license year to reflect new year.
+
 1.1.0 / 2019-12-15
 ==================
 * [FEATURE] Added 'num-step' package and used it in the 'web' method to alternate between ports 3000, 8000, and 8080 when searching for an available web port.

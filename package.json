@@ -1,6 +1,6 @@
 {
   "name": "port-scout",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Finds an available port for http servers and other uses using different searching methods.",
   "main": "dist/index.js",
   "cli": "cli/bin/port-scout.js",
@@ -25,13 +25,13 @@
   "author": "Robert Corponoi",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.12.6",
+    "@types/node": "^13.7.0",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "typescript": "^3.7.2"
+    "mocha": "^7.0.1",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
-    "commander": "^4.0.0",
-    "num-step": "^1.0.2"
+    "commander": "^4.1.0",
+    "num-step": "^1.1.0"
   }
 }
