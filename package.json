@@ -31,7 +31,7 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "commander": "^4.1.0",
+    "commander": "^5.0.0",
     "num-step": "^1.1.0"
   }
 }
